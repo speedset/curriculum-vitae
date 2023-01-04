@@ -16,6 +16,8 @@ let datos;
 	datos = await fetch('https://randomuser.me/api/').then(response => response.json())
 	.then(json => json.results[0]);	
 	displayName();
+	displayAdditionalData();
+	console.log(datos)
 	document.getElementById('profile-photo').src = datos.picture.large;
 })();
 
@@ -102,3 +104,12 @@ document.getElementById('profile-photo').addEventListener('mouseleave',() => {
 	globo.classList.remove("globo");
 	globo.innerHTML = '';
 })
+
+displayAdditionalData = () => {	
+	document.getElementById('age').innerHTML = 'Edad: '+datos.dob.age;
+	document.getElementById('gender').innerHTML = 'Genero: '+datos.gender;
+	document.getElementById('country').innerHTML = 'Pais: '+datos.location.country;
+	document.getElementById('state').innerHTML = 'Estado: '+datos.location.state;
+	document.getElementById('city').innerHTML = 'Ciudad: '+datos.location.city;
+	document.getElementById('postcode').innerHTML = 'Codigo Postal: '+datos.location.postcode;
+}

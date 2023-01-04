@@ -10,7 +10,7 @@ html body {
 }
 
 header {
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 700px;
@@ -41,12 +41,12 @@ header {
     border-radius: 50%;
     padding: 5px;
     border: 1px solid rgb(190, 190, 190);
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.profile-photo:active{
-    position:relative;
-    top:3px;
+.profile-photo:active {
+    position: relative;
+    top: 3px;
 }
 
 .nav-ul {
@@ -90,17 +90,17 @@ header {
 }
 
 .globo {
-    position: absolute;    
+    position: absolute;
     font-size: 12px;
     border-radius: 5px;
     padding: 10px;
     z-index: 1;
-    background-color: white;    
+    background-color: white;
     filter: drop-shadow(0px 0px 1px rgb(190, 190, 190));
     transition: all 0.3s linear;
 }
 
-.globo.iii {   
+.globo.iii {
     width: 150px;
     top: -20px;
     right: 180px;
@@ -114,16 +114,43 @@ header {
     height: 50px;
 }
 
-.globo.abajo-izquierda::before {  
+.globo.abajo-izquierda::before {
     left: 10px;
     bottom: calc(50px/-1.5);
     border-radius: 0 0 10em 0;
     box-shadow: inset calc(50px/-3) calc(50px/4) 0 0 white;
 }
 
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 3px;
+    border: 1px solid rgb(190, 190, 190);
+    padding:10px;
+}
+
+.additional-data {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;    
+}
+
+.ad-li {
+    list-style: none;
+    padding:2px;
+    margin-left: 10px;
+}
 
 @media (max-width: 700px) {
     header {
+        width: 100%;
+    }
+
+    main {
         width: 100%;
     }
 
