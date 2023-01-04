@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+html body {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+header {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(190, 190, 190, 1) 60%, rgba(190, 190, 190, 1) 100%);
+    border-radius: 3px 3px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.profile-photo {
+    background-color: #FFFFFF;
+    display: flex;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid rgb(190, 190, 190);
+    cursor:pointer;
+}
+
+.profile-photo:active{
+    position:relative;
+    top:3px;
+}
+
+.nav-ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.nav-li {
+    color: rgb(190, 190, 190);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.nav-li-active {
+    color: rgb(73, 185, 58);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.fa-solid {
+    font-size: 24px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 5px;
+}
+
+#type-data {
+    color: rgb(120, 120, 120);
+}
+
+#display {
+    font-size: 24px;
+}
+
+.globo {
+    position: absolute;    
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+    background-color: white;    
+    filter: drop-shadow(0px 0px 1px rgb(190, 190, 190));
+    transition: all 0.3s linear;
+}
+
+.globo.iii {   
+    width: 150px;
+    top: -20px;
+    right: 180px;
+}
+
+.globo::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+}
+
+.globo.abajo-izquierda::before {  
+    left: 10px;
+    bottom: calc(50px/-1.5);
+    border-radius: 0 0 10em 0;
+    box-shadow: inset calc(50px/-3) calc(50px/4) 0 0 white;
+}
+
+
+@media (max-width: 700px) {
+    header {
+        width: 100%;
+    }
+
+    .data {
+        height: 100%;
+    }
+}

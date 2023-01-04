@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>  
+  <header>
+    <nav class="nav">
+      <!-- GLOBO MODAL QUE SE MUESTRA Y OCULTA DURANTE EL EVENTO CLICK DE LA IMAGEN -->
+      <p id="globo" class="iii abajo-izquierda"></p> 
+
+      <!-- IMAGEN DE PERFIL DE LA PERSONA -->
+      <img id="profile-photo" class="profile-photo" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Imagen de perfil">
+      
+      <!-- LISTA DE ICONOS QUE CONTIENEN LOS EVENTOS DE QUE DATOS MOSTRAR EN PANTALLA -->
+      <ul id="info-list" class="nav-ul">        
+        <li id="name" class="nav-li-active"><i class="fa-solid fa-user"></i></li>
+        <li id="email" class="nav-li"><i class="fa-solid fa-envelope"></i></li>
+        <li id="date" class="nav-li"><i class="fa-solid fa-calendar"></i></li>
+        <li id="location" class="nav-li"><i class="fa-solid fa-location-dot"></i></li>
+        <li id="phone" class="nav-li"><i class="fa-solid fa-phone"></i></li>
+      </ul>
+    </nav>
+    
+    <!-- SECCION DONDE SE MOSTRARAN LOS DATOS DE LA PERSONA DE ACUERDO 
+      A LOS DISTINTOS EVENTOS -->
+    <div class="data">
+      <p id="type-data"></p>
+      <p id="display"></p>
+    </div>
+  </header>
+  <script src="script.js"></script>
+</body>
+</html>
