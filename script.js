@@ -12,9 +12,9 @@ let datos;
 // UNA PROMESA QUE TRAE LOS DATOS DESDE UNA API GRATUITA
 // ESTOS DATOS SE GUARDAN EN UNA VARIABLE PARA SER UTILIZADA
 // Y MOSTRAR DICHOS DATOS EN PANTALLA DE ACUERDO A LOS DIFERENTES EVENTOS
-(async() => {
+(async () => {
 	datos = await fetch('https://randomuser.me/api/').then(response => response.json())
-	.then(json => json.results[0]);	
+		.then(json => json.results[0]);
 	displayName();
 	displayAdditionalData();
 	console.log(datos)
@@ -28,7 +28,7 @@ function listHover(e) {
 		child.classList.add('nav-li');
 	}
 	e.currentTarget.classList.remove('nav-li');
-	e.currentTarget.classList.add('nav-li-active');	
+	e.currentTarget.classList.add('nav-li-active');
 }
 
 for (let child of childs) {
@@ -91,25 +91,25 @@ handleDisplay = (id) => {
 
 // AGREGA UN EVENTO CLICK A LA FOTO DE PERFIL PARA DESPLEGAR UN GLOBO
 // ESTE MOSTRARA EL NOMBRE DE LA PERSONA EN PANTALLA
-document.getElementById('profile-photo').addEventListener('click', () => {	
-	let globo =	document.getElementById('globo');
+document.getElementById('profile-photo').addEventListener('click', () => {
+	let globo = document.getElementById('globo');
 	globo.classList.add("globo");
-	globo.innerHTML = 'Hola me llamo '+datos.name.first + ' ' + datos.name.last;;
+	globo.innerHTML = 'Hola me llamo ' + datos.name.first + ' ' + datos.name.last;;
 });
 
 // AGREGA UN EVENTO CUANDO SALE EL MOUSE DE LA IMAGEN DE PERFIL
 // QUE BORRA EL GLOBO QUE FUE MOSTRADO CUANDO SE PRODUJO EN EVENTO ANTERIOR
-document.getElementById('profile-photo').addEventListener('mouseleave',() => {
-	let globo =	document.getElementById('globo');
+document.getElementById('profile-photo').addEventListener('mouseleave', () => {
+	let globo = document.getElementById('globo');
 	globo.classList.remove("globo");
 	globo.innerHTML = '';
 })
 
-displayAdditionalData = () => {	
-	document.getElementById('age').innerHTML = 'Edad: '+datos.dob.age;
-	document.getElementById('gender').innerHTML = 'Genero: '+datos.gender;
-	document.getElementById('country').innerHTML = 'Pais: '+datos.location.country;
-	document.getElementById('state').innerHTML = 'Estado: '+datos.location.state;
-	document.getElementById('city').innerHTML = 'Ciudad: '+datos.location.city;
-	document.getElementById('postcode').innerHTML = 'Codigo Postal: '+datos.location.postcode;
+displayAdditionalData = () => {
+	document.getElementById('age').innerHTML = 'Edad: ' + datos.dob.age;
+	document.getElementById('gender').innerHTML = 'Genero: ' + datos.gender;
+	document.getElementById('country').innerHTML = 'Pais: ' + datos.location.country;
+	document.getElementById('state').innerHTML = 'Estado: ' + datos.location.state;
+	document.getElementById('city').innerHTML = 'Ciudad: ' + datos.location.city;
+	document.getElementById('postcode').innerHTML = 'Codigo Postal: ' + datos.location.postcode;
 }
