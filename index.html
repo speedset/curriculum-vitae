@@ -13,57 +13,64 @@
 </head>
 
 <body>
-  <div class="title">
-    <h1>Curriculum Vitae</h1>
-  </div>
-  <nav class="nav-links">
-    <ul class="ul-links">
-      <li class="li-links"><a class="a-links" href="#info-list">Datos principales</a></li>
-      <li class="li-links"><a class="a-links" href="#additional-data">Datos adicionales</a></li>
-    </ul>
-  </nav>
-  <header>
-    <nav class="nav">
-      <!-- GLOBO MODAL QUE SE MUESTRA Y OCULTA DURANTE EL EVENTO CLICK DE LA IMAGEN -->
-      <p id="globo" class="iii abajo-izquierda"></p>
-
-      <!-- IMAGEN DE PERFIL DE LA PERSONA -->
-      <img id="profile-photo" class="profile-photo"
-        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-        alt="Imagen de perfil">
-
-      <!-- LISTA DE ICONOS QUE CONTIENEN LOS EVENTOS DE QUE DATOS MOSTRAR EN PANTALLA -->
-      <ul id="info-list" class="nav-ul">
-        <li id="name" class="nav-li-active"><i class="fa-solid fa-user"></i></li>
-        <li id="email" class="nav-li"><i class="fa-solid fa-envelope"></i></li>
-        <li id="date" class="nav-li"><i class="fa-solid fa-calendar"></i></li>
-        <li id="location" class="nav-li"><i class="fa-solid fa-location-dot"></i></li>
-        <li id="phone" class="nav-li"><i class="fa-solid fa-phone"></i></li>
+  <div class="content">
+    <div class="title">
+      <h1>Curriculum Vitae</h1>
+    </div>
+    <nav class="nav-links">
+      <ul class="ul-links">
+        <li class="li-links"><a class="a-links" href="#info-list">Datos principales</a></li>
+        <li class="li-links"><a class="a-links" href="#additional-data">Datos adicionales</a></li>
       </ul>
     </nav>
-
-    <!-- SECCION DONDE SE MOSTRARAN LOS DATOS DE LA PERSONA DE ACUERDO 
-      A LOS DISTINTOS EVENTOS -->
-    <div class="data">
-      <p id="type-data"></p>
-      <p id="display"></p>
+    <header>
+      <nav class="nav">
+        <!-- GLOBO MODAL QUE SE MUESTRA Y OCULTA DURANTE EL EVENTO CLICK DE LA IMAGEN -->
+        <p id="globo" class="iii abajo-izquierda"></p>
+  
+        <!-- IMAGEN DE PERFIL DE LA PERSONA -->
+        <img id="profile-photo" class="profile-photo"
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+          alt="Imagen de perfil">
+  
+        <!-- LISTA DE ICONOS QUE CONTIENEN LOS EVENTOS DE QUE DATOS MOSTRAR EN PANTALLA -->
+        <ul id="info-list" class="nav-ul">
+          <li id="name" class="nav-li-active"><i class="fa-solid fa-user"></i></li>
+          <li id="email" class="nav-li"><i class="fa-solid fa-envelope"></i></li>
+          <li id="date" class="nav-li"><i class="fa-solid fa-calendar"></i></li>
+          <li id="location" class="nav-li"><i class="fa-solid fa-location-dot"></i></li>
+          <li id="phone" class="nav-li"><i class="fa-solid fa-phone"></i></li>
+        </ul>
+      </nav>
+  
+      <!-- SECCION DONDE SE MOSTRARAN LOS DATOS DE LA PERSONA DE ACUERDO 
+        A LOS DISTINTOS EVENTOS -->
+      <div class="data">
+        <p id="type-data"></p>
+        <p id="display"></p>
+      </div>
+    </header>
+  
+    <div class="subtitle">
+      <h2>Datos Adicionales</h2>
     </div>
-  </header>
-
-  <div class="subtitle">
-    <h2>Datos Adicionales</h2>
+    <main>
+      <ul id="additional-data">
+        <li class="ad-li" id="age"></li>
+        <li class="ad-li" id="gender"></li>
+        <li class="ad-li" id="country"></li>
+        <li class="ad-li" id="state"></li>
+        <li class="ad-li" id="city"></li>
+        <li class="ad-li" id="postcode"></li>
+      </ul>
+    </main>
   </div>
-  <main>
-    <ul id="additional-data">
-      <li class="ad-li" id="age"></li>
-      <li class="ad-li" id="gender"></li>
-      <li class="ad-li" id="country"></li>
-      <li class="ad-li" id="state"></li>
-      <li class="ad-li" id="city"></li>
-      <li class="ad-li" id="postcode"></li>
-    </ul>
-  </main>
+  <footer class="footer">
+    <div id="datenow" class="fleft">aca</div>
+    <div class="frigth">acas</div>
+  </footer>
   <script src="script.js"></script>
+
 </body>
 
 </html>

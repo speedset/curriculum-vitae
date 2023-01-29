@@ -7,6 +7,8 @@ let typeData = document.getElementById('type-data');
 // OPTENER UNA LISTA DE HIJO DE LA LISTA
 let childs = document.getElementById('info-list').children;
 
+let datenow = document.getElementById('datenow');
+
 let datos;
 
 // UNA PROMESA QUE TRAE LOS DATOS DESDE UNA API GRATUITA
@@ -62,6 +64,19 @@ displayPhone = () => {
 	typeData.innerHTML = 'Mi telefono es';
 	display.innerHTML = datos.phone;
 }
+
+ formatDate = (value) => {
+	let date, month, year;
+  
+	date = value.getDate();
+	month = value.getMonth() + 1;
+	year = value.getFullYear();
+  
+	  date = date.toString().padStart(2, '0');
+	  month = month.toString().padStart(2, '0');
+  
+	return `${date}/${month}/${year}`;
+  }
 
 // METODO MANEJADOR PARA LO QUE SE MUESTRA EN PANTALLA
 // CUANDO SE REALIZA EL EVENTO HOVER EN ALGUNO DE LOS ICONOS
